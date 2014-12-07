@@ -1,4 +1,4 @@
-# start-server.sh
 #!/bin/bash
-cd /app
-/bin/bash -l bundle exec unicorn -D -p 3000
+cd /application
+source /etc/profile.d/rvm.sh
+bundle exec unicorn -p 3000
