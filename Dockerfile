@@ -7,6 +7,7 @@ RUN apt-get install -qy curl
 RUN apt-get install -qy nodejs
 
 # установка RVM, Ruby и Bundler
+RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 RUN curl -sSL https://get.rvm.io | bash -s stable
 RUN /bin/bash -l -c "rvm requirements"
 RUN /bin/bash -l -c "rvm install 2.1.5"
